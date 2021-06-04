@@ -1,5 +1,6 @@
 @import url("./fonts/font.css");
 body {
+  background: rgb(212, 204, 255);
   font-family: Roboto;
   font-size: 14px;
   margin: 0;

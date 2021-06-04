@@ -4,28 +4,28 @@ import SavedCard from '../SavedCard/SavedCard';
 import './Main.css';
 
 function Main(props) {
+    console.log(props.savedCards);
     return (
         <>
             <main className="elements">
-                {/* вывод всех котов и избранных в зависимости от роута */}
+                {/* вывод всех квартир и избранных в зависимости от роута */}
                 {props.location.pathname === '/' ?
-                    props.catCards.map((card) => (
+                    props.response.response.map((card) => (
                         <Card
                             key={card._id}
                             card={card}
-                            setSavedCat={props.setSavedCat}
+                            handleAddCard={props.handleAddCard}
                         />
                     )) :
-                    props.savedCatCards.map((card) => (
+                    props.savedCards.map((card) => (
                         <SavedCard
                             key={card._id}
                             card={card}
-                            deleteSavedCat={props.deleteSavedCat}
+                            handleDeleteCard={props.handleDeleteCard}
                         />
                     ))
                 }
             </main>
-            {props.location.pathname === '/' && <p className="message">...загружаем еще котиков...</p>}
         </>
     )
 }
