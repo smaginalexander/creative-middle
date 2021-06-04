@@ -41,7 +41,7 @@ function App() {
           location={location}
         />
       </Route>
-      <Route path="/saved-cats">
+      <Route path="/saved-cards">
         <Main
           handleDeleteCard={handleDeleteCard}
           savedCards={savedCards}

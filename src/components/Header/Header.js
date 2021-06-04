@@ -10,8 +10,8 @@ function Header(props) {
                     to="/"
                     className={props.location.pathname === '/' ? "header__link-active" : 'header__link'}>Все квартиры</Link>
             </div>
-            <div className={props.location.pathname === '/saved-cats' ? "cats-active cats_type_saved" : 'cats cats_type_saved'}>
-                <Link to="/saved-cats" className={props.location.pathname === '/saved-cats' ? "header__link-active" : 'header__link'}>Любимые квартиры</Link>
+            <div className={props.location.pathname === '/saved-cards' ? "cats-active cats_type_saved" : 'cats cats_type_saved'}>
+                <Link to="/saved-cards" className={props.location.pathname === '/saved-cards' ? "header__link-active" : 'header__link'}>Любимые квартиры</Link>
             </div>
         </header>
     );
